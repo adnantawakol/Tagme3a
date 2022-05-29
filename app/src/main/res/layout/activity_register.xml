@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:id="@+id/txtuserreg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/shapetext"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/txtname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/txtname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/shapetext"
+        android:ems="10"
+        android:hint="Display name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/txtpass1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtuserreg" />
+
+    <EditText
+        android:id="@+id/txtpass1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/shapetext"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/txtpass2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtname" />
+
+    <EditText
+        android:id="@+id/txtpass2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shapetext"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/txtmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpass1" />
+
+    <EditText
+        android:id="@+id/txtmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/shapetext"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/txtphone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpass2" />
+
+    <EditText
+        android:id="@+id/txtphone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/shapetext"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/txtgov"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtmail" />
+
+    <EditText
+        android:id="@+id/txtgov"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shapetext"
+        android:ems="10"
+        android:hint="Governorate"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/displayEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtphone" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/shapetext"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/btnreg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtphone">
+
+        <RadioButton
+            android:id="@+id/rbmale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Male  "
+            app:buttonTint="#f44336" />
+
+        <RadioButton
+            android:id="@+id/rbfemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Female  "
+            app:buttonTint="#f44336" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/displayEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="59dp"
+        android:background="#FFFFFF"
+        android:text="Gender"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnreg"
+        app:layout_constraintStart_toStartOf="@+id/txtgov"
+        app:layout_constraintTop_toBottomOf="@+id/txtgov" />
+
+    <Button
+        android:id="@+id/btnreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
+        android:background="@drawable/shapebtn"
+        android:text="Create Account"
+        app:backgroundTint="#f44336"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displayEmail" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="188dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtuserreg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/reglogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
